@@ -1,0 +1,571 @@
+body{
+    margin: 0px;
+}
+
+.navBar{
+    color: rgb(236, 232, 232);
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink:0;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: rgb(70, 69, 69);
+    border-bottom: 1px solid black;
+    padding:10px;
+    font-weight: 100;
+    box-sizing: content-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+  
+.navBar a{
+    color: rgb(236, 232, 232);
+}
+.siteName{
+    font-size: 30px;
+}
+.siteName #logo{
+    margin-right: 15px;
+}
+.navBar a:hover{
+    color: rgb(192, 192, 192);
+    cursor: pointer
+}
+
+.links a{
+    margin-right: 15px;
+    height: inherit;
+}
+.links a:last-child{
+    margin-right: 0px;
+}
+.linksDrop{
+    display: none;
+}
+
+#searchBar{
+    margin-left: 40px;
+    width: 15%;
+    height: 35px;
+    padding: 5px;
+    background-color: rgb(70, 69, 69);
+    border: .5px solid rgb(131, 131, 131);
+    padding-left: 10px;
+    font-size: 20px;
+    color: rgb(236, 232, 232);
+}
+#searchBar{
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+#searchBar:focus{
+    width: 22%;
+}
+
+@media (max-width:900px){
+    .links a{
+        display: none;
+    }
+    .linksDrop{
+        display: inline-block;
+        width: fit-content;
+        position: relative;
+        border: none;
+    }
+    .linkBtn{
+        color: rgb(236, 232, 232);
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        background: transparent;   
+    }
+    .linkDropContent{
+        position: absolute;
+        display: none;
+        z-index: 1;
+        border: .7px solid rgba(34, 34, 34, .8);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        background: rgb(70, 69, 69);
+        /* padding-left:5px;
+        padding-right: 5px; */
+        border-radius: 5px;
+    }
+    .linkDropContent a{
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+    .linkDropContent a:hover{
+        background-color: rgb(85, 85, 85);
+    }
+    .linkDropContent a:last-child{
+        padding-bottom: 5px;
+    }
+    .show{
+        display: block;
+    }
+
+    #searchBar{
+        margin-left: 0px;
+    }
+}
+
+.account {
+    text-align: right;
+}
+.account a{
+    margin-left: 20px;
+}
+.account #signup{
+    border: 1px solid black;
+    border-radius: 5px;
+    background: blue;
+    padding: 5px;
+}
+.accountDrop{
+    display: none;
+}
+@media (max-width:800px){
+    .account{
+        display: none;
+    }
+    .accountDrop{
+        display: inline-block;
+        width: fit-content;
+        position: relative;
+        border: none;
+        /* border: 2px solid black; */
+    }
+    .accountBtn{
+        color: rgb(236, 232, 232);
+        padding:5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        background: transparent;   
+    }
+    .accountDropContent{
+        position: absolute;
+        display: none;
+        z-index: 1;
+        border: .7px solid rgba(34, 34, 34, .8);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        background: rgb(70, 69, 69);
+        padding-left:5px;
+        padding-right: 5px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+    .accountDropContent a{
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+    .accountDropContent a:hover{
+        background-color: rgb(85,85,85);
+    }
+    .accountDropContent a:last-child{
+        padding-bottom: 5px;
+    }
+    .show{
+        display: block;
+    }
+
+}
+@media (max-width:600px){
+    /* #searchBar{
+        width: 35px;
+        height: 20px;
+        font-size: 10px;
+        padding-left: 2px;
+    }
+    #searchBar:focus{
+        width: 20%;
+    } */
+    #logo{
+        display: none;
+    }
+    #title{
+        font-size: 22px;
+    }
+    .linksDrop, .accountDrop{
+        font-size: 18px;
+    }
+    .signUpBox{
+        display: none;
+    }
+
+}
+.infoBox{
+    background-image:     linear-gradient(
+        rgba(17, 17, 255,.94), 
+        rgba(6, 6, 133, 0.95)
+      ), url("/Images/computer.jpg");
+    width: 100%;
+    height: 500px;
+    /*background-size: 100% 100%;*/
+    display: flex;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dialog{
+    flex:.7;
+    padding-left: 50px;
+    margin-top: 100px;
+}
+.infoHead{
+    font-size: 45px;
+}
+.infoBody{
+    margin-top: 30px;
+    line-height: 1.5;
+}
+.signUpBox{
+    flex:1.2;
+    padding-top: 150px;
+    font-size: 30px;
+    
+}
+.signUpBox p{
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.signUpBox a{
+    color: white;
+}
+.topQuestions{
+    position: relative;
+    top: 10px;
+    left: 200px;
+    width: 60%;
+    padding-left: 10px;
+    border-left: 1px dotted rgb(153, 153, 153);
+}
+.tqHead{
+    font-size: 40px;
+}
+.Dropdown{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.Dropdown select{
+    padding: 5px;
+    width: 100px;
+    background-color: rgb(236, 232, 232);
+    height: 20px;
+
+}
+#askQuestion, #newTopic{
+    width: fit-content;
+    background: blue;
+    border-radius: 7px;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+}
+#askQuestion:hover, #newTopic:hover{
+    background-color: rgba(0,0,255,.8);
+}
+#newTopic{
+    margin-left: 10px;
+}
+.tqBody{
+    margin-top: 30px;
+    padding-left: 0px;
+    border-top: 1px dotted rgb(153, 153, 153);
+}
+@media(max-width:800px){
+    .topQuestions{
+        position: relative;
+        left: 0;
+        width: 90%;
+        margin-left: 30px;
+        border-left: none;
+    }
+}
+.back_btn .fas {
+    padding-right: 7px;
+}
+.back_btn{
+    width: fit-content;
+    background: blue;
+    border-radius: 7px;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+}
+.back_btn:hover{
+   background-color: rgba(0,0,255,.8);
+}
+#postTitle:hover{
+    color: blue;
+}
+.postImageThumb{
+    width: 200px;
+    height: 200px;
+}
+.postImageFull{
+    width: 400px;
+    height: 400px;
+}
+.imageBorder{
+    text-align: center;
+}
+.profileImg{
+    width: 100px;
+    height: 120px;
+}
+
+#accountDropContent li{
+    list-style: none;
+}
+#accountDropContent li a{
+    padding-right: 5px;
+}
+.logoutDrop{
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    border: none;
+}
+.logoutBtn{
+    color: rgb(236, 232, 232);
+    padding:5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: transparent;   
+}
+.logoutDropContent{
+    position: absolute;
+    right: 0px;
+    display: none;
+    z-index: 1;
+    border: .7px solid rgba(34, 34, 34, .8);
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background: rgb(70, 69, 69);
+    /* padding-left:5px;
+    padding-right: 5px; */
+}
+.logoutDropContent a{
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+.logoutDropContent a:hover{
+    background-color: rgb(85, 85, 85);
+}
+.logoutDropContent a:last-child{
+    padding-bottom: 5px;
+}
+.show{
+    display: block;
+}
+.postBody a{
+    color: black;
+}
+.commentBody a{
+    color: black;
+}
+#createCommSect{
+    margin: 20px;
+}
+.topicName{
+    color: blue; 
+    /* font-weight:bold; */
+    font-size: 20px;
+}
+#topicsTitle{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 40px;
+}
+.topicName:hover{
+    color: rgb(43, 135, 255);
+    font-size: 22px;
+}
+.topicList{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: -3px 14px 10px rgba(65, 65, 65,.1) ;
+    background-color: rgba(71, 71, 71,.2);
+}
+#topicTable{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 85%;
+}
+#createPostPage{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+/* from w3schools */
+
+
+/* * { box-sizing: border-box; } */
+/* body {
+  font: 16px Arial;
+} */
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.myInput input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+.myInput input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+.myInput input[type=submit] {
+  background-color: blue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: blue !important;
+  color: #ffffff;
+}
+#stanLink{
+    color: black;
+}
+#stanLink:hover{
+    color: rgb(109, 109, 136);
+}
+#orderSelect{
+    width: fit-content;
+}
+#divProfImg{
+    height:30px;
+    width: 30px;
+    overflow: hidden;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+#navProfImg{
+    height: inherit;
+    width: inherit;
+}
+span{
+    pointer-events: none;
+}
+.likeBtn{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+#likeBtnClicked{
+    color: blue;
+}
+.postTop{
+    display: flex;
+}
+.likesCount{
+    margin-bottom: 0px;
+}
+.likeCounterDiv{
+    margin-right: 10px;
+}
+.sortLinksDrop{
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    border: none;
+}
+.sortLinkBtn{
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: transparent;   
+}
+.sortDropContent{
+    position: absolute;
+    display: none;
+    z-index: 30;
+    background-color: #f8fafc;
+    /* border: .7px solid rgba(34, 34, 34, .8); */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 120px;
+}
+.sortDropContent a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+.sortDropContent a:first-child{
+    padding-top: 10px;
+}
+.sortDropContent a:last-child{
+    padding-bottom: 10px;
+}
+.sortDropContent a:hover{
+    background-color: rgb(223, 223, 223);
+}
+.show{
+    display: block;
+}
