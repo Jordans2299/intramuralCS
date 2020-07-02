@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
         $posts = Post::orderBy('created_at','desc')->paginate(10);
 
 
-        #allows $post variable to be called from any page
+        // #allows $post variable to be called from any page
         View::share('posts',$posts);
         // $order = 'desc';
         // View::share('order',$order);
