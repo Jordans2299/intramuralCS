@@ -3,12 +3,14 @@
 
 URL: http://forum.jordanstoneportfolio.com
 
-Use this login if you want to test website:
+**Testing Account:**
+
 user email: test@gmail.com 
 
 password: 12345678
 
-Development:
+
+**Development:**
 
 This website is made using the Laravel MVC framework
 
@@ -21,7 +23,7 @@ Ajax request were made in javascript to update the liked comments feature in rea
 The website is hosted on DigitalOcean
 
 
-Functionality:
+**Functionality:**
 
 supports user accounts creation
 
@@ -42,7 +44,7 @@ pagination is used for the main forum page
 User is prompted to login or signup whenever attempting to create, edit, like, or delete posts or comment
 
 
-Details:
+**Details:**
 
 User must create account to create, edit, and delete posts
 
