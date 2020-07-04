@@ -47,18 +47,14 @@
                      </div>
                      @guest
                          <a class="account" id="login" href="{{ route('login') }}">{{ __('Login') }}</a>
-                     {{-- @if (Route::has('register')) --}}
-                             <a class="account" id="signup" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="account" id="signup" href="{{ route('register') }}">{{ __('Register') }}</a>
                     
                 
                      <div class="accountDrop">
-                             <button id="accountBtn" onclick="accountDropDown()" class="accountBtn"><i class="fas fa-bars"></i></button>
-                             <div class="accountDropContent" id="accountDropContent">
-                                     
+                             <button id="accountBtn" onclick="accountDropDown()" class="accountBtn"><span><i class="fas fa-bars"></i></span></button>
+                             <div class="accountDropContent" id="accountDropContent">            
                                     <a class="nav-link" id="login" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                     {{-- @if (Route::has('register')) --}}
                                     <a class="nav-link" id="signup" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                 
                              </div>
                          </div> 
                     @else
@@ -83,7 +79,9 @@
                  </div>
                  @include('inc.messages')
                  @yield('content')
+                 @include('inc.footer')
              </body>
+            
              <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
              <script type="text/javascript" src="{{ URL::asset('js/imcs.js') }}"></script>
          </html> 

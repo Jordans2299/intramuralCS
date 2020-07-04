@@ -54,7 +54,9 @@
                                         </form>
                                     @endif
                                 @else
-                                    <button class="likeBtn" id="likeBtnUnClicked"><i class="far fa-thumbs-up"></i></button>
+                                    <form action="/login" method="get">
+                                        <button type="submit" class="likeBtn" id="likeBtnUnClicked"><i class="far fa-thumbs-up"></i></button>
+                                    </form>
                                 @endif
                             </div>
                             <div class='postSummary'>
@@ -80,8 +82,5 @@
             @endif
             </div>
         </div>
-        
-        
-
-
+        </div>
 @endsection

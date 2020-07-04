@@ -29,7 +29,9 @@ Route::get('/topics', 'PagesController@courses');
 Route::get('/resources', 'PagesController@resources');
 Route::put('/profileImg','HomeController@profileImg');
 Route::resource('posts', 'PostsController');
-
+Route::get('/blog1','PagesController@blog1');
+Route::get('/blog2','PagesController@blog2');
+Route::get('/blog3','PagesController@blog3');
 Route::get('posts/orderSelect/{order}', ['as'=>'posts.orderSelect','uses'=>'PostsController@orderSelect']);
 
 

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Hi {{$user->name}}!
+                    <h4>Hi {{$user->name}}!</h4>
                     <br>
                     <div >
                             <img src="/storage/images/{{$user->image}}" alt="" class="profileImg">

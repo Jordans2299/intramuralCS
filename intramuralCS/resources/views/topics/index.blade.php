@@ -11,9 +11,11 @@
 
     @if (count($topics)>0)
         @foreach ($topics as $topic)
+        <a href="/topics/{{$topic->id}}" class="topicName">
             <div class="topicList">
-                <a href="/topics/{{$topic->id}}" class="topicName">{{$topic->name}}</a> 
+                {{$topic->name}}
             </div>
+        </a> 
         @endforeach
         {{$topics->links()}}
     @else

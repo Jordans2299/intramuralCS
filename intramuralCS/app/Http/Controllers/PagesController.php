@@ -24,4 +24,13 @@ class PagesController extends Controller
     public function resources(){
         return view('pages/resources');
     }
+    public function blog1(){
+        return view('pages/blog1');
+    }
+    public function blog2(){
+        return view('pages/blog2');
+    }
+    public function blog3(){
+        return view('pages/blog3');
+    }
 }
