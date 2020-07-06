@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 
 class PagesController extends Controller
 {
@@ -32,5 +33,9 @@ class PagesController extends Controller
     }
     public function blog3(){
         return view('pages/blog3');
+    }
+    public function clickedProfile($user_id){
+        $user = User::find($user_id);
+        return view('pages/clickedProfile')->with('user',$user);
     }
 }

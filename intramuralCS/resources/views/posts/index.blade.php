@@ -110,7 +110,7 @@
                             <br>
                             @endif
                             <p style="font-style: italic">Topic: {{$post->topic->name}}</p>
-                            <small>Written by {{$post->user->name}} on {{$post->created_at}}</small>
+                            <small>Written by {{$post->user->name}}</small>
                         </div>
                     </div>
                 </div>

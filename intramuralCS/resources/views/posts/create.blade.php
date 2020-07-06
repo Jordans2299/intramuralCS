@@ -6,7 +6,7 @@
     <br>
     <br>
     <div id="createPostCard">
-    <h1>Create Post</h1>
+    <h1>Ask a Question</h1>
 
     <!--Make sure the form has the autocomplete function switched off:-->
 {{-- <form autocomplete="off" action="/action_page.php">
@@ -18,16 +18,16 @@
     <form method="post" action="{{ route('posts.store') }}" enctype="multipart/form-data" autocomplete="off" >
         {{csrf_field()}}    
         <div class="form-group">
-            <label for="topic">Choose a topic:</label>
+            <label for="topic">Choose a topic</label><br>
             <div class="autocomplete" style="width:300px;">
-                <input id="myInput" type="text" name="myTopic" placeholder="Topic">
+                <input id="myInput" type="text" class="formInput" name="myTopic" placeholder="Topic">
+                <a href="{{route('topics.create')}}" id="createTopicBtn"><i class="fas fa-plus-circle"></i>Create New Topic</a>
             </div>
             {{-- <input type="submit"> --}}
         </div>
         <div class="form-group">
-                    
             <label for="title">Title</label>
-            <input type="text" class="form-control" name="title" placeholder="Title"/>
+            <input type="text" class="formInput" name="title" placeholder="Title"/>
         </div>
         <div class="form-group">
             <label for="body">Body</label>
@@ -37,7 +37,7 @@
             <label for="image">Image Upload: </label>
             <input type="file" name="image">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="submitBtn">Submit</button>
  </form>
     </div>
 </div>

@@ -20,6 +20,9 @@ body{
 a{
     text-decoration: none;
 }
+a:hover{
+    cursor: pointer;
+}
 
   
 .navBar a{
@@ -272,9 +275,16 @@ a{
     width: 100px;
     background-color: rgb(236, 232, 232);
     height: 20px;
+}
+
+#answerHeading{
+    display: inline;
 
 }
-#askQuestion, #newTopic{
+#answerQuestion{
+    float: right;
+}
+#askQuestion, #newTopic, #answerQuestion{
     width: fit-content;
     background: blue;
     border-radius: 7px;
@@ -292,6 +302,7 @@ a{
     margin-top: 30px;
     padding-left: 0px;
     border-top: 1px dotted rgb(153, 153, 153);
+    margin-left: 30px;
 }
 @media(max-width:800px){
     .topQuestions{
@@ -333,6 +344,10 @@ a{
 .profileImg{
     width: 100px;
     height: 120px;
+}
+.postProfileImg{
+    width: 30px;
+    height: 37px;
 }
 
 #accountDropContent li{
@@ -431,6 +446,7 @@ a{
 #createPostPage{
     margin-left: 20px;
     margin-top: 20px;
+    margin-right: 20px;
 }
 
 
@@ -679,3 +695,92 @@ footer{
 .blogTitle{
     margin-bottom: 20px;
 }
+.editDiv{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.submitBtn{
+    width: fit-content;
+    background: lightseagreen;
+    border-radius: .25rem;
+    padding: 6px 12px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    border: 1px solid transparent;
+}
+.editBtn{
+    width: fit-content;
+    background: lightseagreen;
+    border-radius: .25rem;
+    padding: 6px 12px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    border: 1px solid transparent;
+}
+.createTopicBtn{
+    width: fit-content;
+    background: lightseagreen;
+    border-radius: .25rem;
+    padding: 6px 12px;
+    color: white;
+    font-size: 0.5rem;
+    font-weight: 100;
+    line-height: 1.6;
+    border: 1px solid transparent;
+}
+.commentsDiv{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.formInput{
+    display: block;
+    width: auto;
+    height: calc(1.6em + 0.75rem2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+/* .uploaderDiv{
+    border-radius: 30px;
+    width: fit-content;
+    height: 48px;
+    margin-left: 42px;
+    padding: 5px 20px;
+    background-color: rgb(145, 145, 145);
+} */
+a.userPost{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    height: fit-content;
+    border-radius: 30px;
+    width: fit-content;
+    margin-left: 42px;
+    padding: 5px 20px;
+    background-color: rgb(145, 145, 145);
+    display: inline-block;
+}
+.userComment{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    height: fit-content;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 5px 20px;
+    background-color: rgb(145, 145, 145);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+

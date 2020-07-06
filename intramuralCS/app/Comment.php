@@ -26,7 +26,7 @@ class Comment extends Model
         //checks if current user has liked the comment
         public function getIsLikedAttribute()
         {
-            $like = $this->likes()->whereUserId(Auth::id())->first();
+            $like = $this->likes()->whereUserId(auth()->user()->id)->first();
             return (!is_null($like)) ? true : false;
         }
 

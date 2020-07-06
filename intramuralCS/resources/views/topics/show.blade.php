@@ -8,14 +8,14 @@
     @if (count($posts)>0)
     <table id="topicTable" class="table table-striped"> 
         <tr>
-            <th>Title</th>
+            <th>Questions</th>
             <th></th>
             <th></th>
         </tr>
         @foreach ($posts as $post)
             <tr>
                 <th><a href={{route('posts.show',$post->id)}} id=stanLink>{{$post->title}}</a></th>
-                <th><a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a></th>
+                <th><a href="/posts/{{$post->id}}/edit" class="editBtn">Edit</a></th>
                 <th>    <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
                         {{csrf_field()}}  
                         {{ method_field('DELETE') }}

@@ -34,7 +34,6 @@ class PostsController extends Controller
     }
     public function orderSelect($order)
     {
-        //
         if($order=='fav'){
             $unsortedPosts = Post::all();
             $sortedPosts= $unsortedPosts->sortByDesc(function ($post,$key){
@@ -113,7 +112,11 @@ class PostsController extends Controller
         // $comments = $post->comments()->get();
         //does the same thing as the line above but the hasMany model relationship
         //essentially does the same thing so the line below isn't needed
-        $comments = Comment::where('post_id',$id)->get();
+        $unsortedComments = Comment::where('post_id',$id)->get();
+        $sortedComments= $unsortedComments->sortByDesc(function ($comment,$key){
+            return $comment->likes()->count();
+        });
+        $comments = $sortedComments->values();
         return view('posts.show')->with('post',$post)->with('comments',$comments);
     }
 

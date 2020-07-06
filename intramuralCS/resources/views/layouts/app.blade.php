@@ -59,8 +59,11 @@
                          </div> 
                     @else
                     <div class="logoutDrop">
-                        
+                        @if (Auth::user()->image!=NULL)
                         <button id="logoutBtn" onclick="logoutDropDown()" class="logoutBtn"><span><div id="divProfImg"><img src="/storage/images/{{Auth::user()->image}}" alt="" id="navProfImg"></div>{{ Auth::user()->name }}  <i class="fas fa-caret-down"></i></span></button>
+                        @else 
+                        <button id="logoutBtn" onclick="logoutDropDown()" class="logoutBtn"><span>{{ Auth::user()->name }}  <i class="fas fa-caret-down"></i></span></button>
+                        @endif
                         <div class="logoutDropContent" id="logoutDropContent">
                             <a href="/home">Dashboard</a>
                                 <a href="{{ route('logout') }}"
