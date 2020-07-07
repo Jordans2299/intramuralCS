@@ -117,7 +117,7 @@
             </div>
             <hr>
         @endforeach
-        {{$posts ?? ''->links()}}
+        {{$posts ->links("pagination::bootstrap-4") }}
         @else
             <p>No posts found :(</p>
         @endif
