@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="createCommSect">
-        <a href="/posts" class="back_btn"><i class="fas fa-chevron-left"></i>Go Back</a>
+        <a href="/posts/create" class="back_btn"><i class="fas fa-chevron-left"></i>Go Back</a>
         <br>
         <br>
         <h1>Create New Topic</h1>

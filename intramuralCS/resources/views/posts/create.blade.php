@@ -21,10 +21,11 @@
             <label for="topic">Choose a topic</label><br>
             <div class="autocomplete" style="width:300px;">
                 <input id="myInput" type="text" class="formInput" name="myTopic" placeholder="Topic">
-                <a href="{{route('topics.create')}}" id="createTopicBtn"><i class="fas fa-plus-circle"></i>Create New Topic</a>
+                <a href="{{route('topics.create')}}" class="createTopicBtn"><i class="fas fa-plus-circle"></i>Create New Topic</a>
             </div>
             {{-- <input type="submit"> --}}
         </div>
+        <br>
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="formInput" name="title" placeholder="Title"/>
